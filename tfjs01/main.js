@@ -79,7 +79,8 @@ class Main {
 
             const button = document.createElement('button');
             const img = document.createElement('img');
-            img.src = iconsArr[i];
+            //img.src = iconsArr[i];
+            img.src = "icon_play.svg";
             li.appendChild(button);
             button.appendChild(img);
 
