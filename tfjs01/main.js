@@ -22,10 +22,10 @@ const NUM_CLASSES = 4;
 
 // Icons array for dynamically generated buttons
 const iconsArr = [
-    "images/icon_play.svg",
-    "images/icon_pause.svg",
-    "images/icon_snd_on.svg",
-    "images/icon_snd_off.svg"
+    "icon_play.svg",
+    "icon_pause.svg",
+    "icon_snd_on.svg",
+    "icon_snd_off.svg"
 ];
 
 // YouTube playlist (video IDs)
