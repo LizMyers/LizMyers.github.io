@@ -31,14 +31,14 @@ const iconsArr = [
 // YouTube playlist (video IDs)
 const playList = [
     "VwVg9jCtqaU",
-    "lEljKc9ZtU8",
+    "lEljKc9ZtU8", 
     "D7ZL45xS39I"
 ];
 
 // Corresponding titles
 const playListTitles = [
-    "Machine Learning Zero to Hero",
-    "Getting Started with Tensorflow 2.0",
+    "Machine Learning Zero to Hero", 
+    "Getting Started with Tensorflow 2.0", 
     "Tensorflow Magic for Your JS App"
 ];
 
@@ -79,8 +79,7 @@ class Main {
 
             const button = document.createElement('button');
             const img = document.createElement('img');
-            //img.src = iconsArr[i];
-            img.src = "icon_play.svg";
+            img.src = iconsArr[i];
             li.appendChild(button);
             button.appendChild(img);
 
@@ -189,31 +188,27 @@ class Main {
                     // The number of examples for each class
                     const exampleCount = this.knn.getClassExampleCount();
 
-                    // Prediction confidence threshold (advisable to keep above .5 or 50%);
-                    const confLevel = .8;
-
                     // Update info text
                     if (exampleCount[i] > 0) {
                         this.infoTexts[i].innerText = ` ${exampleCount[i]} examples`;
                         document.getElementById('meter-text' + i).style.width = ` ${res.confidences[i] * 100}%`;
                     }
-                    // If Confidence score > selectedLevel 'light up' relevant btn and display meter value
+                    // If Confidence score > 80% 'light up' relevant btn and display meter value
                     // Play/Pause and UnMute/Mute function as toggles - so we need to set color of 
                     // opposite toggle back to (default) blue
-
-                    if (res.classIndex == 0 && res.confidences[i] >= confLevel) {
+                    if (res.classIndex == 0 && res.confidences[i] >= .8) {
                         player.playVideo();
                         document.getElementById("elem0").querySelector('button').style.backgroundColor = "orange";
                         document.getElementById("elem1").querySelector('button').style.backgroundColor = "#35D9FE";
-                    } else if (res.classIndex == 1 && res.confidences[i] >= confLevel) {
+                    } else if (res.classIndex == 1 && res.confidences[i] >= .8) {
                         player.pauseVideo();
                         document.getElementById("elem1").querySelector('button').style.backgroundColor = "orange";
                         document.getElementById("elem0").querySelector('button').style.backgroundColor = "#35D9FE";
-                    } else if (res.classIndex == 2 && res.confidences[i] >= confLevel) {
+                    } else if (res.classIndex == 2 && res.confidences[i] >= .8) {
                         player.unMute();
                         document.getElementById("elem2").querySelector('button').style.backgroundColor = "orange";
                         document.getElementById("elem3").querySelector('button').style.backgroundColor = "#35D9FE";
-                    } else if (res.classIndex == 3 && res.confidences[i] >= confLevel) {
+                    } else if (res.classIndex == 3 && res.confidences[i] >= .8) {
                         player.mute();
                         document.getElementById("elem3").querySelector('button').style.backgroundColor = "orange";
                         document.getElementById("elem2").querySelector('button').style.backgroundColor = "#35D9FE";
