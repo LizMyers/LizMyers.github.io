@@ -2,7 +2,7 @@
 
 ### Getting started
 
-Clone this repo and cd into the tfjs01 directory. Then update the dependencies with npm install.
+Clone this repo and cd into the <b>tfjs01</b> directory. Then update the dependencies with npm install.
 ```
 npm install
 ```
