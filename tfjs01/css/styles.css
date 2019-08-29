@@ -1,14 +1,12 @@
         body {
-            background: #dedede;
+            background #efefef;
             font-family: 'Rubik', sans-serif;
             font-size: 13pt;
             font-weight: normal;
             line-height: 1.3em;
-            color: #454545;
         }
         
         #stage-container {
-            background: #dedede;
             position: absolute;
             display: block;
             width: 100%;
@@ -299,7 +297,9 @@
         .col {
             font-size: 1.1em;
             line-height: 1.75em;
-            color: #676767;
+            font-family: 'Montserrat', sans-serif;
+            font-size: 0.98em;
+            color: #232323;
         }
         
         .right-col-copy {
@@ -307,7 +307,9 @@
         }
         
         h4 {
+            font-family: 'Rubik', sans-serif;
             color: #232323;
+            font-size: 1.15em;
             font-weight: bold;
             margin-top: 20px;
             line-height: 2em;
