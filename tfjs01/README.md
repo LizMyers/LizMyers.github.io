@@ -6,7 +6,7 @@ Clone this repo and cd into the tfjs01 directory. Then update the dependencies w
 ```
 npm install
 ```
-Use npm start to run a local server on localhost: 9966.
+Use npm to run a local server on localhost: 9966.
 ```
 npm start
 ```
