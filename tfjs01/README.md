@@ -22,7 +22,7 @@ Consider mapping the four function buttons to the 4 arrow keys on your keyboard.
 
 Alternatively, you could map the arrow keys to the walking direction on a Google Map or Real Estate tour.
 
-Last but not least, following a recipe, mechanical repair, or other "process" where your hands are dirty or occupied would make a good project to contoll with gestures. 
+You could also use gestures to follow a process like cooking or mechanical repairs. Think about scenarios where your hands are dirty or occupied and you need to "turn a page" or move to the next stage of the process.
 
 
 
