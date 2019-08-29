@@ -231,15 +231,15 @@
         }
         
         #vid1 {
-            background-image: url("thumb01.jpg");
+            background-image: url("img/thumb01.jpg");
         }
         
         #vid2 {
-            background-image: url("thumb02.jpg");
+            background-image: url("img/thumb02.jpg");
         }
         
         #vid3 {
-            background-image: url("thumb03.jpg");
+            background-image: url("img/thumb03.jpg");
         }
         
         .thumbnail:hover,
