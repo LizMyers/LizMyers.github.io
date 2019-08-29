@@ -262,24 +262,24 @@
         a,
         a img {
             outline: none;
-            text-decoration: none;
         }
         
         a {
             color: rgb(196, 247, 114) !important;
+            line-height: 1.5em;
+            font-weight: bold;
+            text-decoration: none;
         }
         
         a:visited {
-            color: rgb(52, 208, 243)!important;
+            color: rgb(134, 170, 75) !important;
         }
         
-        a:active {
-            color: orange;
+        a:hover {
+            color: yellow!important;
+            font-weight: bold;
             cursor: pointer;
-        }
-        
-        a:visited {
-            color: orangered;
+            text-decoration: underline!important;
         }
         
         #story-container {
@@ -294,6 +294,7 @@
         #left-col {
             float: left;
             width: 40%;
+            font-size: 1.15em!important;
         }
         
         #right-col {
@@ -303,26 +304,41 @@
         }
         
         .col {
-            font-size: 1.1em;
-            line-height: 1.75em;
+            font-size: 1em!important;
+            line-height: 1.5em;
             font-family: 'Montserrat', sans-serif;
             font-size: 0.98em;
-            /* color: #232323; */
-            color: white;
+            color: #b9b8b8;
         }
         
-        .right-col-copy {
+        b {
+            color: #dedeee;
+            font-weight: bold;
+        }
+        
+        .right-col {
             width: 70%;
         }
         
         h4 {
             font-family: 'Rubik', sans-serif;
-            /* color: #232323; */
-            color: white;
-            font-size: 1.15em;
+            color: #dedede;
             font-weight: bold;
             margin-top: 20px;
             line-height: 2em;
+        }
+        
+        .resTitle {
+            font-family: 'Rubik', sans-serif;
+            font-size: 1em;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+        }
+        
+        .resLabel {
+            display: block;
+            position: relative;
+            margin-top: 20px;
         }
         
         ol {
@@ -332,9 +348,4 @@
         
         ol li {
             margin-top: 20px;
-        }
-        
-        b {
-            font-weight: bold!important;
-            color: yellow;
         }
