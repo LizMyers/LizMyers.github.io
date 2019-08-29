@@ -18,7 +18,7 @@ Be sure and run the following command to generate a new dist/build.js file. You 
 npm run build
 ```
 ### Make it Your Own
-Consider mapping the four function buttons to the 4 arrow keys on your keyboard. This could be used to rotate a 360 degree video or a 3d model. 
+Consider mapping the function buttons to the 4 arrow keys on your keyboard. This could be used to rotate a 360 degree video or a 3d model. 
 
 Alternatively, you could map the arrow keys to the walking direction on a Google Map or Real Estate tour.
 
