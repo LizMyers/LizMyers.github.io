@@ -1,22 +1,18 @@
-# Tensorflow JS in the Browser
-## Computer Vision and the Teachable Machine
-## Installation
+# Machine Learning in the Browser
+## TensorflowJS and The Teachable Machine
+### Getting started
 
-Download this repo and unzip to your local directory. Using the command line, cd into this directory and use npm install to to install or update any missing modules.
+Clone this repo and cd into the directory. Then update the dependencies with npm install.
 ```
 npm install
-
 ```
-Spin up a local server so we can interact with the application
-
+Use npm start to run a local server on localhost: 9966.
 ```
 npm start
+```
+The main.js file is the where you can change the number of classes, confidence score threshold, and functions that map to your classes. When you're ready to publish on the web, be sure and run the following command to generate a new dist/build.js file. You will need to upload this along with main.js for things to work properly on the web
 
 ```
-
-## Learn More
-- Make it your own
-- Notice 3 main files to edit
--- index.html
--- styles.css
--- main.js
+npm run build
+```
+### Further Ideas
