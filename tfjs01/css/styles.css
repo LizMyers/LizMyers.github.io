@@ -24,7 +24,7 @@
             display: block;
             width: 60%;
             height: 100%;
-            left: 0px;
+            left: 40%;
             top: 0px;
         }
         
@@ -34,7 +34,7 @@
             display: block;
             width: 40%;
             height: 100%;
-            left: 60%;
+            left: 0px;
             top: 0px;
         }
         
@@ -67,7 +67,10 @@
         /*----------INPUT AREA ---------------*/
         
         #input_frame {
-            margin: 60px 0 0 170px;
+            display:block;
+            position:absolute;
+            margin-top: 100px;
+            margin-left: calc(50% - 168px);
             padding: 0;
             height: 252px;
             width: 336px;
@@ -77,7 +80,10 @@
         }
         
         #input_video {
-            margin: 80px 0 0 70.5%;
+            display:block;
+            position:absolute;
+            margin-top: 120px;
+            margin-left:calc(20.25% - 166px);
             padding: 0;
             height: 250px;
             width: 332px;
@@ -114,9 +120,9 @@
             position: relative;
             right: 0;
             display: block;
-            font-size: .85em;
+            font-size: 0.9em;
             font-weight: normal;
-            margin: -70px 0 0px 76px;
+            margin: -70px 0 0px 80px;
             text-align: left;
             color: white;
             text-transform: uppercase;
@@ -182,13 +188,12 @@
         }
         /*----------OUTPUT AREA ---------------*/
         
-        #output_video,
-        #player {
+        #output_video, #player{
             position: absolute;
             width: 640px;
             height: 370px;
-            top: 72px;
-            left: 17.01%;
+            top: 70px;
+            left: 17%;
             background: #232323 !important;
         }
         

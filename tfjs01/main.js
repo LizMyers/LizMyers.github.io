@@ -108,7 +108,7 @@ class Main {
             });
             // Create info text
             const infoText = document.createElement('span');
-            infoText.innerText = " No examples added";
+            infoText.innerText = " 0 examples";
             li.appendChild(infoText);
             this.infoTexts.push(infoText);
 
