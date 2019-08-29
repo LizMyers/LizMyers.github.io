@@ -1,5 +1,5 @@
         body {
-            background #efefef;
+            background: #454545;
             font-family: 'Rubik', sans-serif;
             font-size: 13pt;
             font-weight: normal;
@@ -261,16 +261,25 @@
         
         a,
         a img {
-            outline: none
+            outline: none;
+            text-decoration: none;
+        }
+        
+        a {
+            color: rgb(196, 247, 114) !important;
+        }
+        
+        a:visited {
+            color: rgb(52, 208, 243)!important;
         }
         
         a:active {
-            color: rgb(206, 80, 7);
+            color: orange;
             cursor: pointer;
         }
         
         a:visited {
-            color: rgb(6, 162, 209);
+            color: orangered;
         }
         
         #story-container {
@@ -280,7 +289,6 @@
             margin-left: 10%;
             margin-bottom: 200px;
             width: 80%;
-            border: 0px solid red;
         }
         
         #left-col {
@@ -299,7 +307,8 @@
             line-height: 1.75em;
             font-family: 'Montserrat', sans-serif;
             font-size: 0.98em;
-            color: #232323;
+            /* color: #232323; */
+            color: white;
         }
         
         .right-col-copy {
@@ -308,7 +317,8 @@
         
         h4 {
             font-family: 'Rubik', sans-serif;
-            color: #232323;
+            /* color: #232323; */
+            color: white;
             font-size: 1.15em;
             font-weight: bold;
             margin-top: 20px;
@@ -325,6 +335,6 @@
         }
         
         b {
-            font-weight: bold;
-            color: rgb(206, 80, 7);
+            font-weight: bold!important;
+            color: yellow;
         }
