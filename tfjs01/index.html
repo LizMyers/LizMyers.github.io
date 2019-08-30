@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="icon shortcut" href="/tfjs01/img/favicon.ico" />
+    <link rel="shortcut icon" href="/tfjs01/img/favicon.ico" />
 
     <title>TensorflowJS Demo</title>
     <link rel="stylesheet" type="text/css" href="css/reset.css" />
@@ -65,23 +65,23 @@
         <div id=left-col class="col">
             <h4>What Is This?</h4>
             <p>
-                This is a demo of machine learning in the browser. It's based on Tensorflow JS and a pre-trained image recognition model called MobileNet. Using a webcam, we can extend the MobileNet model to recognize 4 new gestures or poses. After "training", the model
-                recognizes your pose and triggers the corresponding function in code.
+                This is a demo of machine learning in the browser. It's based on Tensorflow JS and a pre-trained image recognition model called MobileNet. Using a webcam, we can extend the MobileNet model to recognize four new gestures or poses. After training, the model
+                recognizes your pose and triggers the corresponding action.
             </p>
 
             <h4>How Do I Get Started?</h4>
             Think of a pose for each of the blue buttons. This can be something as simple as leaning into or away from the webcam. Strike your pose <b>and hold one of the buttons down until you've captured 10-30 images</b> (the more training examples,
-            the more accurate the model). <b>Congratulations! You've just mapped a gesture to an action.</b> Similarily, make a gesture and capture images for the rest of the buttons. When you're done you should be able to trigger the 4 actions just by
-            making a simple gesture.
+            the more accurate the model). <b>Congratulations! You've just mapped a gesture to an action.</b> Similarily, make a gesture and capture images for the rest of the buttons. When you're done you should be able to trigger the four actions just
+            by making a simple gesture.
 
             <h4>About the Confidence Score</h4>
-            <p>The orange meter next to the buttons shows the "confidence score" or the degree of certainty. This is the computer saying for example: "I'm about 70% certain you just made the play gesture". <b>Sometimes the camera "sees" elements from more
+            <p>The orange meter next to the buttons shows the confidence score or the degree of certainty. This is the computer saying for example: "I'm about 70% certain you just made the play gesture". <b>Sometimes the camera sees elements from more
                 than one of your training examples though.</b> (This is why multiple confidence meters may move at once.) In this project, <b>only gestures with an 80% confidence score or higher</b> actually trigger the corresponding action. </p>
 
             <h4>Why ML in the Browser?</h4>
             <p>
-                Ease of use, speed, and privacy - these are the primary advantages. Web projects are easier to deploy and access than mobile apps. The browser is free and compatible with both Windows and Mac. Training the model in the browser (using a technique called
-                "transfer learning" ) is much faster than training in the cloud. Once the session ends, your images are "dumped" - maintaining privacy.
+                Ease of use, speed, and privacy - these are the primary advantages. Web projects are easier to deploy and access than mobile apps. The browser is free and compatible with both Windows and Mac. Training the model in the browser, using a technique called
+                transfer learning, is much faster than training in the cloud. Once the session ends, your images are "dumped" - maintaining privacy.
             </p>
         </div>
 
