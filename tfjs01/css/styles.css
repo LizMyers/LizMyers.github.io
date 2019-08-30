@@ -4,6 +4,7 @@
             font-size: 13pt;
             font-weight: normal;
             line-height: 1.3em;
+            padding-bottom: 200px;
         }
         
         #stage-container {
@@ -287,7 +288,6 @@
             position: absolute;
             margin-top: 730px;
             margin-left: 10%;
-            margin-bottom: 200px;
             width: 80%;
         }
         
@@ -299,7 +299,7 @@
         
         #right-col {
             float: right;
-            width: 36%;
+            width: 40%;
             margin-left: 20px;
         }
         
