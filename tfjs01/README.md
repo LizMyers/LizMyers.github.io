@@ -10,7 +10,7 @@ npm start
 ```
 The main.js file is where you can change things like the number of classes, related functions, and minimum confidence score. You can see your changes instantly on your local server.
 
-If you want to share your files, be sure and run the build command -- there are a lot of dependencies to include.
+If you want to share your files, be sure and run the build command -- there are a lot of dependencies included in the resulting dist/build.js file.
 
 ```
 npm run build
