@@ -2,17 +2,14 @@
 
 ### Getting started
 
-Clone this repo and <b>cd into the tfjs01</b> directory. Then update the dependencies with npm install.
-```
-npm install
-```
-Use npm to run a local server on localhost: 9966.
+Clone this repo and <b>cd into the tfjs01</b> directory. 
+Use npm to run the project on a local server in your browser (Chrome recommended)
 ```
 npm start
 ```
-The main.js file is where you can change things like the number of classes, related functions, and confidence score threshold. You can see your changes instantly on your local server. But when you're ready to publish, there's an extra step to take.
+The main.js file is where you can change things like the number of classes, related functions, and minimum confidence score. You can see your changes instantly on your local server.
 
-Be sure and run the following command to generate a new dist/build.js file. You will need to upload this along with main.js for things to work properly on the web.
+If you want to share your files, be sure and run the build command -- there are a lot of dependencies to inclued.
 
 ```
 npm run build
