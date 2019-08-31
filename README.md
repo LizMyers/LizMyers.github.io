@@ -11,4 +11,4 @@ This is an extension to the above project, providing more functinoality in a mor
 This is another remix of TFJS01 - this time rotating a 360 degree video and mapping the action to the four arrows keys.
 
 ### Coffee Guru (coming soon!)
-This project uses a custome model, Tensorflow light, and React Native to provide image recognition on mobile devices. Its use case is centered around colorful coffee capsules that have been seperated from their boxes. By holding a capsule up to the webcam, the user can get relevant details about flavor, strength, and inventory level (number of capsules on hand).
+This project uses a custome model, Tensorflow light, and React Native to provide image recognition on mobile devices. Its use case is centered around colorful coffee capsules that have been seperated from their boxes. By holding a capsule up to the webcam, the user can get relevant details about flavor, strength, and inventory level.
