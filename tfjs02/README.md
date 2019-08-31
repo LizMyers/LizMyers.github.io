@@ -2,7 +2,7 @@
 
 ### Getting started
 
-Clone this repo and <b>cd into the tfjs02</b> directory. Then update the dependencies with npm install.
+Clone this repo and <b>cd into the tfjs02</b> directory. Then install the dependencies with npm install.
 ```
 npm install
 ```
