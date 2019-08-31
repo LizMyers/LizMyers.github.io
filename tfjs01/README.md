@@ -3,7 +3,8 @@
 ### Getting started
 
 Clone this repo and <b>cd into the tfjs01</b> directory. 
-Use npm to run the project on a local server in your browser (Chrome recommended)
+Use npm to run the project on a local server in your browser 
+(Chrome is highly recommended)
 ```
 npm start
 ```
