@@ -37,7 +37,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 var NUM_CLASSES = 4;
 
 // Icons array for dynamically generated buttons
-var iconsArr = ["https://LizMyers.github.io/tfjs01/img/icon_play.svg", "https://LizMyers.github.io/tfjs01/img/icon_pause.svg", "https://LizMyers.github.io/tfjs01/img/icon_snd_on.svg", "https://LizMyers.github.io/tfjs01/img/icon_snd_off.svg"];
+var iconsArr = ["img/icon_play.svg", "img/icon_pause.svg", "img/icon_snd_on.svg", "img/icon_snd_off.svg"];
 
 // YouTube playlist (video IDs)
 var playList = ["VwVg9jCtqaU", "lEljKc9ZtU8", "D7ZL45xS39I"];
@@ -45,7 +45,7 @@ var playList = ["VwVg9jCtqaU", "lEljKc9ZtU8", "D7ZL45xS39I"];
 // Corresponding titles
 var playListTitles = ["Machine Learning Zero to Hero", "Getting Started with Tensorflow 2.0", "Tensorflow Magic for Your JS App"];
 
-// Webcam image size. Must be 227. 
+// Webcam image size. Must be 227.
 var IMAGE_SIZE = 227;
 // K value for KNN
 var TOPK = 10;
@@ -78,23 +78,57 @@ var Main = function () {
         // Add video element to DOM
         document.body.appendChild(this.video);
 
-        // Create training buttons and labels   
+        // Create training buttons and labels
 
         var _loop = function _loop(i) {
+
+            //BUILD INFERENCE AREA
+
+            var thisMeter = document.getElementById("m" + [i]);
+            var meter = document.createElement('div');
+            var mspan = document.createElement('span');
+            meter.id = "meter" + i;
+            meter.className = "meter";
+            mspan.id = "meter-text" + i;
+            mspan.className = "meterText";
+            thisMeter.appendChild(meter);
+            meter.appendChild(mspan);
+
+            // BUILD TRAINING AREA
+
             var li = document.createElement('li');
             document.getElementById("trainingBtns").appendChild(li);
-            li.style.padding = '10px';
             li.id = "elem" + i;
 
-            var button = document.createElement('button');
-            var img = document.createElement('img');
-            img.src = iconsArr[i];
-            li.appendChild(button);
-            button.appendChild(img);
+            var li2 = document.createElement('li');
+            document.getElementById("trainingTxt").appendChild(li2);
+            li2.id = "text" + i;
 
-            // Listen for button click (i.e. user is training actions 0 - 3) 
+            var li3 = document.createElement('li');
+            document.getElementById("trainingCanvas").appendChild(li3);
+
+            var canvas = document.createElement('canvas');
+            canvas.id = "canvas" + i;
+            canvas.className = "imgHolder";
+            li3.appendChild(canvas);
+
+            // Create info text
+            var infoText = document.createElement('span');
+            infoText.innerText = " 0 examples";
+            li2.appendChild(infoText);
+            _this.infoTexts.push(infoText);
+
+            var button = document.createElement('button');
+            var btntext = document.createElement('span');
+            btntext.innerText = "Train Class " + (i + 1);
+            btntext.className = "btnLabel";
+            li.appendChild(button);
+            button.appendChild(btntext);
+
+            // Listen for button click (i.e. user is training actions 0 - 3)
             button.addEventListener('mousedown', function () {
-                return _this.training = i;
+                _this.training = i;
+                _this.writeThumbs(i);
             });
             button.addEventListener('mouseup', function () {
                 return _this.training = -1;
@@ -119,22 +153,6 @@ var Main = function () {
                 player.loadVideoById(playList[2]);
                 title.innerText = playListTitles[2];
             });
-            // Create info text
-            var infoText = document.createElement('span');
-            infoText.innerText = " 0 examples";
-            li.appendChild(infoText);
-            _this.infoTexts.push(infoText);
-
-            // Create confidence meter
-            var meter = document.createElement('div');
-            var meterText = document.createElement('span');
-
-            li.appendChild(meter);
-            meter.id = "meter" + i;
-            meter.className = "meter";
-            meter.appendChild(meterText);
-            meterText.id = "meter-text" + i;
-            meterText.className = "meterText";
         };
 
         for (var i = 0; i < NUM_CLASSES; i++) {
@@ -199,17 +217,43 @@ var Main = function () {
             cancelAnimationFrame(this.timer);
         }
     }, {
+        key: 'writeThumbs',
+        value: function writeThumbs(i) {
+            var canv, context;
+            return regeneratorRuntime.async(function writeThumbs$(_context2) {
+                while (1) {
+                    switch (_context2.prev = _context2.next) {
+                        case 0:
+                            // Add current image to canvas
+                            canv = document.getElementById("canvas" + i);
+
+                            canv.style.width = "180px";
+                            canv.style.height = "120px";
+                            canv.style.transform = "scaleX(-1)";
+
+                            context = canv.getContext('2d');
+
+                            context.drawImage(this.video, 0, 0, canv.width, canv.height);
+
+                        case 6:
+                        case 'end':
+                            return _context2.stop();
+                    }
+                }
+            }, null, this);
+        }
+    }, {
         key: 'animate',
         value: function animate() {
             var _this2 = this;
 
             var image, logits, infer, numClasses, res, i, exampleCount;
-            return regeneratorRuntime.async(function animate$(_context2) {
+            return regeneratorRuntime.async(function animate$(_context3) {
                 while (1) {
-                    switch (_context2.prev = _context2.next) {
+                    switch (_context3.prev = _context3.next) {
                         case 0:
                             if (!this.videoPlaying) {
-                                _context2.next = 14;
+                                _context3.next = 14;
                                 break;
                             }
 
@@ -226,6 +270,7 @@ var Main = function () {
 
 
                             if (this.training != -1) {
+
                                 logits = infer();
 
                                 // Add current image to classifier
@@ -235,17 +280,17 @@ var Main = function () {
                             numClasses = this.knn.getNumClasses();
 
                             if (!(numClasses > 0)) {
-                                _context2.next = 12;
+                                _context3.next = 12;
                                 break;
                             }
 
                             // If classes have been added run predict
                             logits = infer();
-                            _context2.next = 10;
+                            _context3.next = 10;
                             return regeneratorRuntime.awrap(this.knn.predictClass(logits, TOPK));
 
                         case 10:
-                            res = _context2.sent;
+                            res = _context3.sent;
 
 
                             for (i = 0; i < NUM_CLASSES; i++) {
@@ -260,24 +305,17 @@ var Main = function () {
                                     document.getElementById('meter-text' + i).style.width = ' ' + res.confidences[i] * 100 + '%';
                                 }
                                 // If Confidence score > 80% 'light up' relevant btn and display meter value
-                                // Play/Pause and UnMute/Mute function as toggles - so we need to set color of 
+                                // Play/Pause and UnMute/Mute function as toggles - so we need to set color of
                                 // opposite toggle back to (default) blue
                                 if (res.classIndex == 0 && res.confidences[i] >= .8) {
                                     player.playVideo();
-                                    document.getElementById("elem0").querySelector('button').style.backgroundColor = "orange";
-                                    document.getElementById("elem1").querySelector('button').style.backgroundColor = "#35D9FE";
+                                    // document.getElementById("elem0").querySelector('button').style.opacity = .2;
                                 } else if (res.classIndex == 1 && res.confidences[i] >= .8) {
                                     player.pauseVideo();
-                                    document.getElementById("elem1").querySelector('button').style.backgroundColor = "orange";
-                                    document.getElementById("elem0").querySelector('button').style.backgroundColor = "#35D9FE";
                                 } else if (res.classIndex == 2 && res.confidences[i] >= .8) {
                                     player.unMute();
-                                    document.getElementById("elem2").querySelector('button').style.backgroundColor = "orange";
-                                    document.getElementById("elem3").querySelector('button').style.backgroundColor = "#35D9FE";
                                 } else if (res.classIndex == 3 && res.confidences[i] >= .8) {
                                     player.mute();
-                                    document.getElementById("elem3").querySelector('button').style.backgroundColor = "orange";
-                                    document.getElementById("elem2").querySelector('button').style.backgroundColor = "#35D9FE";
                                 }
                             }
 
@@ -294,7 +332,7 @@ var Main = function () {
 
                         case 15:
                         case 'end':
-                            return _context2.stop();
+                            return _context3.stop();
                     }
                 }
             }, null, this);

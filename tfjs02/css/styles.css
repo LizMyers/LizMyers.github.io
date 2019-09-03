@@ -517,7 +517,10 @@
 
   #video-tutorial {
     width: 320px;
-    height: 160px;
+    height: auto;
     margin-bottom: 50px;
     border: 1px solid white;
   }
+   #video-tutorial > img{
+     width: 100%!important;
+   }
