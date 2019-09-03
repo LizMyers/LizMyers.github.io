@@ -56,22 +56,22 @@
 
     path#icon_play{
       fill: white!important;
-      background-image: url("../img/icon_play.svg");
+      background-image: url("https://lizmyers.github.io/tfjs02/img/icon_play.svg");
     }
 
     path#icon_pause{
       fill: white!important;
-      background-image: url("../img/icon_pause.svg");
+      background-image: url("https://lizmyers.github.io/tfjs02/img/icon_pause.svg");
     }
 
     path#icon_snd_on{
       fill: white!important;
-      background-image: url("../img/icon_snd_on.svg");
+      background-image: url("https://lizmyers.github.io/tfjs02/img/icon_snd_on.svg");
     }
 
     path#icon_snd_off{
       fill: white!important;
-      background-image: url("../img/icon_snd_off.svg");
+      background-image: url("https://lizmyers.github.io/tfjs02/img/icon_snd_off.svg");
     }
 
     #stage-container {
