@@ -1,0 +1,523 @@
+    body {
+      background: #454545;
+      font-family: 'Rubik', sans-serif;
+      font-size: 13pt;
+      font-weight: normal;
+      line-height: 1.3em;
+      margin:0;
+      padding:0;
+      overflow-x: hidden!important;
+    }
+
+    /*----------CONFIDENCE METERS ---------------*/
+
+    #inference-container {
+      background: #232323;
+      width: 100%;
+      height: 40px;
+      margin: 0px;
+      padding: 0px;
+      border: 0px solid green;
+    }
+
+    #tf-logo {
+      width: 24px; 
+      height: 24px; 
+      margin: 8px 0 0 50px;
+    }
+
+    #inf-meters {
+      display:block;
+      position:absolute;
+      width: 76%;
+      height: 40px;
+      left: 18%;
+      top: 4px;
+      border:0px solid yellow;
+    }
+
+    #inf-meters li svg {
+      display:block;
+      position:relative;
+      margin: 6px 0 0 8px;
+      width:22px;
+      height:22px;
+      border:0px solid orange;
+    }
+
+    #inf-meters li {
+      width: 20%;
+      height: 90%;
+      list-style-type: none;
+      margin-left: 20px;
+      background: none;
+      border:0px solid cyan;
+    }
+
+    path#icon_play{
+      fill: white!important;
+      background-image: url("../img/icon_play.svg");
+    }
+
+    path#icon_pause{
+      fill: white!important;
+      background-image: url("../img/icon_pause.svg");
+    }
+
+    path#icon_snd_on{
+      fill: white!important;
+      background-image: url("../img/icon_snd_on.svg");
+    }
+
+    path#icon_snd_off{
+      fill: white!important;
+      background-image: url("../img/icon_snd_off.svg");
+    }
+
+    #stage-container {
+      position: absolute;
+      display: block;
+      width: 100%;
+      height: 670px;
+      left: 0px;
+      top: 38px;
+      border:0px solid yellow;
+      overflow-x: hidden!important;
+    }
+
+    #output-container {
+      background: #343434;
+      position: absolute;
+      display: block;
+      width: 60%;
+      height: 100%;
+      left: 40%;
+      top: 0px;
+    }
+
+    #input-container {
+      background: #454545;
+      position: absolute;
+      display: block;
+      width: 40%;
+      height: 100%;
+      left: 0px;
+      top: 0px;
+  
+    }
+
+    #training-container {
+        background: #232323;
+        position: absolute;
+        display: block;
+        width: 100%;
+        height: 170px;
+        right: 0px;
+        bottom: 0px;
+    }
+
+    .section-label {
+        display: inline-block;
+        /* position: relative; */
+        border: 1px dashed white;
+        font-size: .75em;
+        font-weight: normal;
+        line-height: 1.2em;
+        letter-spacing: 2pt;
+        text-transform: uppercase;
+        color: white;
+        opacity:0.5;
+        height: auto;
+        width: auto;
+        margin: 2px 0 0 4px;
+        text-align: center;
+        padding: 3px 5px 3px 5px;
+    }
+    /*----------INPUT AREA ---------------*/
+
+    #input_frame {
+        display: block;
+        position: absolute;
+        margin-top: 99px;
+        margin-left: calc(50% - 168px);
+        padding: 0;
+        height: 252px;
+        width: 336px;
+        border: 4px solid white;
+        background: #454545;
+        box-shadow: 0px 2px 2px #666;
+    }
+
+    #input_video {
+        display: block;
+        position: absolute;
+        margin-top: 80px;
+        margin-left: calc(20.25% - 166px);
+        padding: 0;
+        height: 250px;
+        width: 332px;
+    }
+
+    span#userInfo {
+        position: relative;
+        border: 0px solid white;
+        color: white!important;
+        top: 40%;
+        left: 0;
+        width: 320px;
+    }
+
+
+    /*----------TRAINING AREA ---------------*/
+
+    ul#trainingTxt {
+      display: block;
+      position :absolute;
+      height: 20px;
+      width:72%;
+      margin: 0px 12.5% auto;
+      padding:0;
+      border: 0px solid #1b1b1b;
+    }
+
+    ul#trainingTxt li{
+      display: block;
+      position: relative;
+      margin-top: -15px;
+      width: 24%;
+      height: 20px;
+      text-align: left!important;
+      padding-left:7px;
+      list-style-type: none;
+      background: #232323;
+      opacity:0.75;
+      font-size:0.85em!important;
+      z-index: 1000;
+      border:1px solid #232323;
+    }
+
+    ul#trainingCanvas{
+      height: 118px;
+      width:75%;
+      margin: 0 12.5% auto;
+      border: 0px solid lightblue;
+    }
+
+    ul#trainingCanvas li{
+      width: 300px;
+      height: 100%;
+      list-style-type: none;
+      background: none;
+      border: 0px solid green;
+    }
+  
+    canvas.imgHolder {
+      /* background: #1b1b1b; */
+      /* box-shadow: -2px -2px 2px #131313; */
+      margin: 4px 0px 0px 58px;
+      padding:0;
+      height:110px;
+      width:190px;
+    }
+
+    #canvas0  {
+      background-image: url("../img/btn_play.png");
+      background-position: 50% 50%;
+      background-size: 240px;
+    }  
+      #canvas1  {
+      background-image: url("../img/btn_pause.png");
+      background-position: 50% 50%;
+      background-size: 240px;
+    }
+      #canvas2  {
+      background-image: url("../img/btn_sound_on.png");
+      background-position: 50% 50%;
+      background-size: 240px;
+    }
+    #canvas3  {
+      background-image: url("../img/btn_sound_off.png");
+      background-position: 50% 50%;
+      background-size: 240px;
+    }
+
+    ul#trainingBtns {
+      display:inline-block;
+      position:relative;
+        height: auto;
+        width:72%;
+        margin: 4px 12.5% auto;
+        border: 0px solid magenta;
+    }
+
+    ul#trainingBtns li {
+      display: inline-block;
+      position: relative;
+        width: 24.8%;
+        height: 40px;
+        top:0!important;;
+        left: 0;
+        list-style-type: none;
+        background: none;
+        border: 0px solid yellow;
+    }
+
+
+    li span {
+        font-size: 0.9em;
+        font-weight: normal;
+        margin: -70px 0 0px 96px;
+        text-align: left;
+        color: white;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        padding: 2px;
+        opacity: .8;
+        width: 180px;
+        text-shadow: 1px 1px 4px black;
+    }
+
+    button {
+        margin:0;
+        padding:0;
+        margin-left: 60px!important;
+        margin-top:10px;
+        display:block;
+        position:absolute;
+        width: 60%;
+        height: 24px;
+        text-align: center;
+        font-size: 1.2em;
+        border-radius: 10px;
+        background: white;
+        opacity: .95;
+        border: 1px solid white;
+        cursor: pointer;
+        z-index: 10000;
+    }
+
+    span.btnLabel{
+      width:100%;
+      display: block;
+      margin:0;
+      padding:0;
+      color: black;
+      text-align: center!important;
+      font-size: 0.65em;
+      line-height:1em;
+      text-shadow: none;
+    }
+
+    li button {
+      background: #35D9FE;
+      box-shadow: 3px 3px 6px #111;
+      border:1px solid green;
+      border: none!important;
+      outline: none!important;
+    }
+
+    li button:active,
+    li button:hover {
+        background: rgb(255, 100, 8)!important;
+        box-shadow: 0px 0px 0px #111;
+        border: none !important;
+        outline: none !important;
+    }
+
+
+    .meter {
+        display: inline-block;
+        position: absolute;
+        margin: -15px 0 0 40px;
+        padding: 3px;
+        background: 121212;
+        height: 10px;
+        width: 174px;
+        border-radius: 10px;
+        box-shadow: -2px -2px 2px black;
+    }
+
+      .meterText {
+        display:block;
+        position:relative;
+        background: rgb(255, 174, 0);
+        /* background: rgb(255, 157, 1); */
+        width:0%;
+        max-width:96%;
+        height: 5px;
+        margin: 0px;
+        padding: 0px;
+        border-radius: 10px;
+    }
+
+    #icon-play,
+    #icon-pause,
+    #icon-snd-on,
+    #icon-snd-off{
+      fill:white!important;
+      opacity:.4;
+    }
+    /*----------OUTPUT AREA ---------------*/
+
+    #output_video,
+    #player {
+        display: block;
+        position: absolute;
+        width: 640px;
+        height: 364px;
+        margin-top: 50px;
+        margin-left: calc(50% - 320px);
+        background: #232323 !important;
+    }
+
+    li {
+        float: left;
+    }
+
+    #output-selectors {
+        display: block;
+        position: absolute;
+        margin-left: calc(50% - 320px);
+        margin-top: 400px;
+        width: 640px;
+        height: 60px;
+        background: #232323;
+    }
+
+    #output-selectors>ul {
+        float: right;
+    }
+
+    #video-title {
+        display: block;
+        color: white;
+        font-size: .95em;
+        line-height: 1.5em;
+        width: 60%;
+        margin: 15px 0 0 10px;
+        border: 0px solid yellow;
+    }
+
+    .thumbnail {
+        display: block;
+        width: 100px;
+        height: 50px;
+        margin-top: -37px;
+        margin-right: 10px;
+        background: black;
+        cursor: pointer;
+    }
+
+    #vid1 {
+        background-image: url("../img/thumb01.jpg");
+    }
+
+    #vid2 {
+        background-image: url("../img/thumb02.jpg");
+    }
+
+    #vid3 {
+        background-image: url("../img/thumb03.jpg");
+    }
+
+    .thumbnail:hover,
+    .thumnail:active {
+        border-bottom: 3px solid orange;
+    }
+
+    img {
+        border: 0;
+        width: 70%;
+        height: 70%;
+    }
+    /*----------TUTORIAL AREA ---------------*/
+
+    a,
+    a img {
+        outline: none;
+    }
+
+    a {
+        color: rgb(196, 247, 114) !important;
+        line-height: 1.5em;
+        font-weight: bold;
+        text-decoration: none;
+    }
+
+    a:visited {
+        color: rgb(134, 170, 75) !important;
+    }
+
+    a:hover {
+        color: orange!important;
+        font-weight: bold;
+        cursor: pointer;
+        text-decoration: underline!important;
+    }
+
+    #story-container {
+        display: block;
+        position: absolute;
+        margin-top: 730px;
+        margin-left: 10%;
+        width: 80%;
+        height: 1800px;
+    }
+
+    #left-col {
+        display: block;
+        position: absolute;
+        width: 40%;
+        font-size: 1.15em!important;
+    }
+
+    #right-col {
+        float: right;
+        width: 40%;
+        margin-left: 20px;
+    }
+
+    .col {
+        font-size: 1em!important;
+        line-height: 1.5em;
+        font-family: 'Montserrat', sans-serif;
+        font-size: 0.98em;
+        color: #b9b8b8;
+    }
+
+    b {
+        color: #dedeee;
+        font-weight: bold;
+    }
+
+    .right-col {
+        width: 70%;
+    }
+
+    h4 {
+        font-family: 'Rubik', sans-serif;
+        color: #dedede;
+        font-weight: bold;
+        margin-top: 20px;
+        line-height: 2em;
+    }
+
+    .resTitle {
+        font-family: 'Rubik', sans-serif;
+        font-size: 1em;
+        letter-spacing: 2px;
+        text-transform: uppercase;
+    }
+
+    .resLabel {
+        display: block;
+        position: relative;
+        margin-top: 20px;
+    }
+
+  #video-tutorial {
+    width: 320px;
+    height: 160px;
+    margin-bottom: 50px;
+    border: 1px solid white;
+  }

@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="shortcut icon" href="/tfjs01/img/favicon.ico" />
+
+    <title>TensorflowJS Demo</title>
+    <link rel="stylesheet" type="text/css" href="css/reset.css" />
+    <link rel="stylesheet" type="text/css" href="css/styles.css" />
+    <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Rubik&display=swap" rel="stylesheet">
+    <script src="dist/build.js"></script>
+
+</head>
+
+<body>
+  <div id="inference-container">
+    <img src = "img/tf-logo.png " id="tf-logo" />
+
+    <ul id="inf-meters">
+      <li id="m0">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+          <path fill="none" d="M0 0h24v24H0V0z"/>
+          <path id="icon-play" d="M10 16.5l6-4.5-6-4.5zM12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8z"/ ></svg>
+
+      </li>
+      <li id="m1">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="none" d="M0 0h24v24H0V0z"/><path id="icon-pause" d="M9 16h2V8H9v8zm3-14C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm1-4h2V8h-2v8z"/></svg>
+
+      </li>
+      <li id="m2">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="none" d="M0 0h24v24H0V0z"/><path id="icon-snd-on" d="M3 9v6h4l5 5V4L7 9H3zm7-.17v6.34L7.83 13H5v-2h2.83L10 8.83zM16.5 12c0-1.77-1.02-3.29-2.5-4.03v8.05c1.48-.73 2.5-2.25 2.5-4.02zM14 3.23v2.06c2.89.86 5 3.54 5 6.71s-2.11 5.85-5 6.71v2.06c4.01-.91 7-4.49 7-8.77 0-4.28-2.99-7.86-7-8.77z"/></svg>
+
+      </li>
+      <li id="m3">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="none" d="M0 0h24v24H0V0z"/><path id="icon-snd-off" d="M4.34 2.93L2.93 4.34 7.29 8.7 7 9H3v6h4l5 5v-6.59l4.18 4.18c-.65.49-1.38.88-2.18 1.11v2.06c1.34-.3 2.57-.92 3.61-1.75l2.05 2.05 1.41-1.41L4.34 2.93zM10 15.17L7.83 13H5v-2h2.83l.88-.88L10 11.41v3.76zM19 12c0 .82-.15 1.61-.41 2.34l1.53 1.53c.56-1.17.88-2.48.88-3.87 0-4.28-2.99-7.86-7-8.77v2.06c2.89.86 5 3.54 5 6.71zm-7-8l-1.88 1.88L12 7.76zm4.5 8c0-1.77-1.02-3.29-2.5-4.03v1.79l2.48 2.48c.01-.08.02-.16.02-.24z"/></svg>
+
+      </li>
+    </ul>
+
+  </div>
+    <div id="stage-container">
+
+
+        <div id="output-container">
+
+            <div id="player"></div>
+
+            <div id="output-selectors">
+                <span id="video-title"></span>
+                <ul>
+                    <li>
+                        <div id="vid1" class="thumbnail"></div>
+                    </li>
+                    <li>
+                        <div id="vid2" class="thumbnail"></div>
+                    </li>
+                    <li>
+                        <div id="vid3" class="thumbnail"></div>
+                    </li>
+                </ul>
+            </div>
+
+        </div>
+
+        <div id="input-container">
+
+            <div id="input_frame">
+                <span id="userInfo" class="section-label">Loading mobilenet. . .</span>
+                <video id="input_video"></video>
+            </div>
+
+        </div>
+
+        <div id="training-container">
+          <ul id="trainingCanvas"></ul>
+          <ul id="trainingTxt"></ul>
+          <ul id="trainingBtns"></ul>
+        </div>
+
+    </div>
+    <!-- end stage-container -->
+    <br/>
+    <div id="story-container">
+        <div id="left-col" class="col">
+            <h4>What Is This?</h4>
+            <p>
+                This is a demo of machine learning in the browser. It's based on Tensorflow JS and a pre-trained image recognition model called MobileNet. Using a webcam, we can extend the MobileNet model to recognize four new gestures or poses. After training, the model
+                recognizes your pose and triggers the corresponding action.
+            </p>
+
+            <h4>How Do I Get Started?</h4>
+            Think of a pose for each of the blue buttons. This can be something as simple as leaning into or away from the webcam. Strike your pose <b>and hold one of the buttons down until you've captured 10-30 images</b> (the more training examples,
+            the more accurate the model). <b>Congratulations! You've just mapped a gesture to an action.</b> Similarily, make a gesture and capture images for the rest of the buttons. When you're done you should be able to trigger the four actions just
+            by making a simple gesture.
+
+            <h4>About the Confidence Score</h4>
+            <p>The orange meter, located at the very top of the page, shows the confidence score or the degree of certainty. This is the computer saying for example: "I'm about 70% certain you just made the play gesture". <b>Sometimes the camera sees elements from more
+                than one of your training examples though.</b> (This is why multiple confidence meters may move at once.) In this project, <b>only gestures with an 80% confidence score or higher</b> actually trigger the corresponding action. </p>
+
+            <h4>Why ML in the Browser?</h4>
+            <p>
+                Ease of use, speed, and privacy - these are the primary advantages. Web projects are easier to deploy and access than mobile apps. The browser is free and compatible with both Windows and Mac. Training the model in the browser, using a technique called
+                transfer learning, is much faster than training in the cloud. Once the session ends, your images are "dumped" - maintaining privacy.
+            </p>
+
+                        <h4> How Do I start Over?</h4>
+            <p>
+                Simply refresh your browser :-)  In computer speak, this also ends your session. As mentioned above, your images will be dumped as well - maintaining privacy and saving memory. 
+            </p>
+        </div>
+
+
+        <div id="right-col" class="col">
+
+            <h4 class="resTitle">Tutorial</h4>
+            <div id="video-tutorial"></div>
+
+            <h4 class="resTitle">Resources</h4>
+
+            <p class="resources"><a href="https://github.com/LizMyers/LizMyers.github.io" target="_blank">View Lizs code</a> </p>
+
+            <span class="resLabel">The Teachable Machine</span>
+            <p class="resources"><a href=" https://teachablemachine.withgoogle.com/" target="_blank">Take the tutorial - it's excellent!</a></p>
+
+            <span class="resLabel">Simplest Starting Point</span>
+            <p class="resources"><a href="https://github.com/googlecreativelab/teachable-machine-boilerplate" target="_blank">Get the boilerplate</a></p>
+
+            <span class="resLabel">More Tensorflow JS Demos</span>
+            <p class="resources"><a href="https://www.tensorflow.org/js/demos" target="_blank">Explore them all!</a></p>
+
+            <span class="resLabel">Learn More w/3Blue1Brown Videos</span>
+            <p class="resources"><a href="https://www.youtube.com/watch?v=aircAruvnKk" target="_blank">Intro to machine learning &amp; computer vision</a> </p>
+
+            <span class="resLabel">Try the YouTube API</span>
+            <p class="resources"><a href="https://developers.google.com/youtube/iframe_api_reference" target="_blank">Learn to control YouTube videos with JavaScript</a> <br /></p>
+
+        </div>
+    </div>
+
+    <script src="js/YouTubeAPIScript.js"></script>
+</body>
+
+</html>
