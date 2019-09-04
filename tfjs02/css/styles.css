@@ -103,7 +103,6 @@
       height: 100%;
       left: 0px;
       top: 0px;
-  
     }
 
     #training-container {
@@ -172,28 +171,27 @@
 
     ul#trainingTxt {
       display: block;
-      position :absolute;
-      height: 20px;
+      position: fixed;
+      height: 30px!important;
       width:72%;
       margin: 0px 12.5% auto;
       padding:0;
-      border: 0px solid #1b1b1b;
     }
 
     ul#trainingTxt li{
       display: block;
-      position: relative;
-      margin-top: -15px;
+      position: fixed;
+      margin-top: -10px;
       width: 24%;
-      height: 20px;
+      height: 30px;
       text-align: left!important;
       padding-left:7px;
       list-style-type: none;
       background: #232323;
       opacity:0.75;
       font-size:0.85em!important;
-      z-index: 1000;
-      border:1px solid #232323;
+      /* z-index: 1000; */
+      border: 0px solid yellow;
     }
 
     ul#trainingCanvas{
@@ -253,59 +251,70 @@
     ul#trainingBtns li {
       display: inline-block;
       position: relative;
-        width: 24.8%;
-        height: 40px;
-        top:0!important;;
-        left: 0;
-        list-style-type: none;
-        background: none;
-        border: 0px solid yellow;
+      width: 24.8%;
+      height: 40px;
+      top:0!important;
+      left: 0;
+      list-style-type: none;
+      background: none;
+      border: 0px solid yellow;
     }
 
 
     li span {
-        font-size: 0.9em;
+        font-size: 0.85em;
         font-weight: normal;
-        margin: -70px 0 0px 96px;
+        margin: -74px 0 0px 96px;
         text-align: left;
         color: white;
         text-transform: uppercase;
         letter-spacing: 1px;
         padding: 2px;
         opacity: .8;
-        width: 180px;
+        border: 0px solid white;
         text-shadow: 1px 1px 4px black;
     }
 
     button {
         margin:0;
         padding:0;
-        margin-left: 60px!important;
+        margin-left: 59px!important;
         margin-top:10px;
         display:block;
         position:absolute;
-        width: 60%;
+        width: 182px;
         height: 24px;
         text-align: center;
         font-size: 1.2em;
-        border-radius: 10px;
+        border-radius: 4px;
         background: white;
         opacity: .95;
-        border: 1px solid white;
         cursor: pointer;
         z-index: 10000;
     }
 
     span.btnLabel{
-      width:100%;
-      display: block;
-      margin:0;
-      padding:0;
+      float: right;
+      width:120px;
+      margin: 0px 16px 0 6px!important;
       color: black;
-      text-align: center!important;
-      font-size: 0.65em;
-      line-height:1em;
+      text-align:left;
+      font-size: 0.6em;
+      line-height:1.75em;
       text-shadow: none;
+      border:0px solid white;
+    }
+
+    span.counter{
+      width:14px;
+      float: left;
+      width:15px;
+      font-size:1em;
+      text-align:center;
+      color:black;
+      text-shadow: none;
+      margin: -3px 4px 0 10px;
+      border:0px solid orange;
     }
 
     li button {

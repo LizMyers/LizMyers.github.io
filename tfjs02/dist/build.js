@@ -100,9 +100,9 @@ var Main = function () {
             document.getElementById("trainingBtns").appendChild(li);
             li.id = "elem" + i;
 
-            var li2 = document.createElement('li');
-            document.getElementById("trainingTxt").appendChild(li2);
-            li2.id = "text" + i;
+            //   const li2 = document.createElement('li');
+            //   document.getElementById("trainingTxt").appendChild(li2);
+            //   li2.id = "text" + i;
 
             var li3 = document.createElement('li');
             document.getElementById("trainingCanvas").appendChild(li3);
@@ -114,20 +114,27 @@ var Main = function () {
 
             // Create info text
             var infoText = document.createElement('span');
-            infoText.innerText = " 0 examples";
-            li2.appendChild(infoText);
+            infoText.className = "counter";
+            infoText.innerText = " -- ";
+            //li2.appendChild(infoText);
             _this.infoTexts.push(infoText);
 
             var button = document.createElement('button');
-            var btntext = document.createElement('span');
-            btntext.innerText = "Train Class " + (i + 1);
-            btntext.className = "btnLabel";
+            var btnText = document.createElement('span');
+            var imgCount = document.createElement('span');
+            imgCount.id = "imgCount" + i;
+
+            btnText.innerText = " | Train Class " + (i + 1);
+            btnText.className = "btnLabel";
+
             li.appendChild(button);
-            button.appendChild(btntext);
+            button.appendChild(infoText);
+            button.appendChild(btnText);
 
             // Listen for button click (i.e. user is training actions 0 - 3)
             button.addEventListener('mousedown', function () {
                 _this.training = i;
+                btnText.innerText = "  |  examples ";
                 _this.writeThumbs(i);
             });
             button.addEventListener('mouseup', function () {
@@ -301,7 +308,7 @@ var Main = function () {
                                 // Update info text
 
                                 if (exampleCount[i] > 0) {
-                                    this.infoTexts[i].innerText = ' ' + exampleCount[i] + ' examples';
+                                    this.infoTexts[i].innerText = ' ' + exampleCount[i] + ' ';
                                     document.getElementById('meter-text' + i).style.width = ' ' + res.confidences[i] * 100 + '%';
                                 }
                                 // If Confidence score > 80% 'light up' relevant btn and display meter value
@@ -309,13 +316,20 @@ var Main = function () {
                                 // opposite toggle back to (default) blue
                                 if (res.classIndex == 0 && res.confidences[i] >= .8) {
                                     player.playVideo();
-                                    // document.getElementById("elem0").querySelector('button').style.opacity = .2;
+                                    document.getElementById("canvas0").style.border = "2px solid orange";
+                                    document.getElementById("canvas1").style.border = "none";
                                 } else if (res.classIndex == 1 && res.confidences[i] >= .8) {
                                     player.pauseVideo();
+                                    document.getElementById("canvas1").style.border = "2px solid orange";
+                                    document.getElementById("canvas0").style.border = "none";
                                 } else if (res.classIndex == 2 && res.confidences[i] >= .8) {
                                     player.unMute();
+                                    document.getElementById("canvas2").style.border = "2px solid orange";
+                                    document.getElementById("canvas3").style.border = "none";
                                 } else if (res.classIndex == 3 && res.confidences[i] >= .8) {
                                     player.mute();
+                                    document.getElementById("canvas3").style.border = "2px solid orange";
+                                    document.getElementById("canvas2").style.border = "none";
                                 }
                             }
 
