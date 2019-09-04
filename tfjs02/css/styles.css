@@ -220,22 +220,22 @@
 
     #canvas0  {
       background-image: url("../img/btn_play.png");
-      background-position: 50% 50%;
+      background-position: 50% 30%;
       background-size: 240px;
     }  
       #canvas1  {
       background-image: url("../img/btn_pause.png");
-      background-position: 50% 50%;
+      background-position: 50% 30%;
       background-size: 240px;
     }
       #canvas2  {
       background-image: url("../img/btn_sound_on.png");
-      background-position: 50% 50%;
+      background-position: 50% 30%;
       background-size: 240px;
     }
     #canvas3  {
       background-image: url("../img/btn_sound_off.png");
-      background-position: 50% 50%;
+      background-position: 50% 30%;
       background-size: 240px;
     }
 
