@@ -16,7 +16,8 @@ This project use the MobileNet Model for image recognition and the YouTube API f
 3. Added still images on capture - reminding users of gestures and related actions
 
 
-### AIY Voice Kit 
+
+## AIY Voice Kit 
 
 #### What is That?
 This project adds computer vision to the voice kit, so that machines can describe what they see! Using a Raspberry Pi, Tensorflow, and Python, you can identify three classes: logos, text, and objects. A detailed tutorial is available <a href="https://www.hackster.io/elizmyers/add-vision-to-the-aiy-voice-kit-e9ff3d" target="_blank">here</a>.
