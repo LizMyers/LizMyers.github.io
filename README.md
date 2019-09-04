@@ -6,7 +6,7 @@
 
 #### <a href="https://LizMyers.github.io/tfjs01/" target="_new"> TFJS01 </a>
 
-This project use the MobileNet Model for image recognition and the YouTube API for video control. In this example, the user trains the model on four gestures or poses that correspond to four video actions: play, pause, unmute, mute. While the program runs, the webcam is watching for one of the poses and responds with the corresponding action. Please note: this project is designed for Chrome on desktop/laptop. it's best viewed in full screen mode.
+This project use the MobileNet Model for image recognition and the YouTube API for video control. In this example, the user trains the model on four gestures or poses that correspond to four video actions: play, pause, unmute, mute. While the program runs, the webcam is watching for one of the poses and responds with the corresponding action. Please note: this project is designed for Chrome on desktop/laptop. It's best viewed in full screen mode.
 
 
 #### <a href="https://LizMyers.github.io/tfjs02/" target="_blank">TFJS02</a>
@@ -18,7 +18,7 @@ This project use the MobileNet Model for image recognition and the YouTube API f
 2. Implemented icons as labels rather than buttons (greyed out, single state)
 3. Added still images on capture - reminding users of gestures and related actions
 
-Please note: this project is designed for Chrome on desktop/laptop. it's best viewed in full screen mode.
+Please note: this project is designed for Chrome on desktop/laptop. It's best viewed in full screen mode.
 
 
 ## AIY Voice Kit 
