@@ -1,6 +1,6 @@
 # Tensorflow
 
-<img src = "screenshotX2.png" />
+<img src = "ScreenShotX2.png" />
 
 
 ### TFJS - Experiments in Chrome
