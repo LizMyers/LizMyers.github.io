@@ -2,7 +2,7 @@
 
 ### Getting started
 
-Clone this repo and <b>cd into the tfjs01</b> directory. 
+Clone this repo and <b>cd into the tfjs02</b> directory. 
 Use npm to run the project on a local server in your browser 
 (Chrome is highly recommended)
 ```
