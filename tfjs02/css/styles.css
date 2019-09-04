@@ -327,7 +327,7 @@
 
     li button:active,
     li button:hover {
-        background: orange;
+        background: orange!important;
         box-shadow: 0px 0px 0px #111;
         border: none !important;
         outline: none !important;
@@ -429,10 +429,6 @@
         background-image: url("../img/thumb03.jpg");
     }
 
-    .thumbnail:hover,
-    .thumnail:active {
-        border-bottom: 3px solid orange;
-    }
 
     img {
         border: 0;
