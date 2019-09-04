@@ -106,7 +106,7 @@ class Main {
           // Create info text
           const infoText = document.createElement('span');
           infoText.className = "counter";
-          infoText.innerText = " -- ";
+          infoText.innerText = " ";
           //li2.appendChild(infoText);
           this.infoTexts.push(infoText);
 
@@ -116,7 +116,7 @@ class Main {
           imgCount.id = "imgCount" + i;
          
 
-          btnText.innerText = " | Train Class " + (i + 1);
+          btnText.innerText = " Train Class " + (i + 1);
           btnText.className = "btnLabel";
 
           li.appendChild(button);
@@ -240,20 +240,21 @@ class Main {
                   // opposite toggle back to (default) blue
                   if (res.classIndex == 0 && res.confidences[i] >= .8) {
                       player.playVideo();
-                      document.getElementById("canvas0").style.border = "2px solid orange";
-                      document.getElementById("canvas1").style.border = "none";
+                       // document.getElementById("canvas0").style.borderBottom = "4px solid rgb(255, 100, 8)";
+                       document.getElementById("elem0").querySelector("button").style.background = "rgb(255, 100, 8)";
+                      document.getElementById("elem1").querySelector("button").style.background = "#35D9FE";
                   } else if (res.classIndex == 1 && res.confidences[i] >= .8) {
                       player.pauseVideo();
-                      document.getElementById("canvas1").style.border = "2px solid orange";
-                      document.getElementById("canvas0").style.border = "none";
+                      document.getElementById("elem1").querySelector("button").style.background = "rgb(255, 100, 8)";
+                      document.getElementById("elem0").querySelector("button").style.background = "#35D9FE";
                   } else if (res.classIndex == 2 && res.confidences[i] >= .8) {
                       player.unMute();
-                      document.getElementById("canvas2").style.border = "2px solid orange";
-                      document.getElementById("canvas3").style.border = "none";
+                      document.getElementById("elem2").querySelector("button").style.background = "rgb(255, 100, 8)";
+                      document.getElementById("elem3").querySelector("button").style.background = "#35D9FE";
                   } else if (res.classIndex == 3 && res.confidences[i] >= .8) {
                       player.mute();
-                      document.getElementById("canvas3").style.border = "2px solid orange";
-                      document.getElementById("canvas2").style.border = "none";
+                    document.getElementById("elem3").querySelector("button").style.background = "rgb(255, 100, 8)";
+                    document.getElementById("elem2").querySelector("button").style.background = "#35D9FE";
                   }
               }
           }
