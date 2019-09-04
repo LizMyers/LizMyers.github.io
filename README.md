@@ -10,7 +10,7 @@ This project use the MobileNet Model for image recognition and the YouTube API f
 
 <b>Try it Out</b>
 Please note: this project has been designed for Chrome, on a laptop and displayed at full screen. It is not meant for mobile devices.
-<a href="https://LizMyers.github.io/tfjs01/" target="_blank">Open TFJS02 in a new tab</a>
+<a href="https://LizMyers.github.io/tfjs01/" target="_blank">Open TFJS01</a>
 
 #### TFJS02 
 
@@ -23,7 +23,7 @@ Please note: this project has been designed for Chrome, on a laptop and displaye
 
 <b>Try it Out</b>
 Please note: this project has been designed for Chrome, on a laptop and displayed at full screen. It is not meant for mobile devices.
-<a href="https://LizMyers.github.io/tfjs02/" target="_blank">Open TFJS02 in a new tab</a>
+<a href="https://LizMyers.github.io/tfjs02/" target="_blank">Open TFJS02</a>
 
 ## AIY Voice Kit 
 
