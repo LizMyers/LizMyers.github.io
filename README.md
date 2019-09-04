@@ -13,6 +13,10 @@ This project adds computer vision to the voice kit so that the machine can descr
 This project use the MobileNet Model for image recognition and the YouTube API for video control. In this example, the user trains the model on four gestures or poses that correspond to four video actions: play, pause, unmute, mute. While the program runs the webcam is watching for one of the poses and responds with the corresponding action.
 
 #### TFJS02
-The first version utilised standard video control buttons <em>as labels</em> and controls for training. In a quick usability test (with a friend), I discovered that this caused mental friction because the buttons didn't actually control the video. Once Tensorflow kicks in... the only way to play/pause the video is with the corresponding gesture defined in training. By clearly separating training and inference areas - as well as implementing <em>icons as labels - not as buttons</em>, version 02 has become more useable than v01.
+The first version utilised standard video control buttons for training. In a quick usability test, I discovered that this caused friction and frustration because they were deceiving. They looked like real playback controls, but during inference they didn't do anything. Once Tensorflow kicks in... the only way to play/pause the video is with the corresponding gesture defined in training. 
 
+Here's what I did to improve the usability: 
+1. Separated training and inference areas (bottom and top rows respectively)
+2. Implemented icons as labels rather than buttons (greyed out, single state)
+3. Added still images on capture - reminding users of gestures and related actions
 
