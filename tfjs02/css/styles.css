@@ -520,12 +520,8 @@
         margin-top: 20px;
     }
 
-  #video-tutorial {
-    width: 320px;
-    height: auto;
+  iframe {
     margin-bottom: 50px;
-    border: 1px solid white;
+    border: 3px solid rgb(95, 95, 95);
   }
-   #video-tutorial > img{
-     width: 100%!important;
-   }
+
