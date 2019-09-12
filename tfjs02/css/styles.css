@@ -113,6 +113,8 @@
         height: 170px;
         right: 0px;
         bottom: 0px;
+        border:0px solid orange;
+
     }
 
     .section-label {
@@ -196,17 +198,17 @@
 
     ul#trainingCanvas{
       height: 118px;
-      width:75%;
-      margin: 0 12.5% auto;
-      border: 0px solid lightblue;
+      width:72%;
+      margin-left: 13.5%;
+      border: 0px solid blue;
     }
 
     ul#trainingCanvas li{
-      width: 300px;
+      width: 24%;
       height: 100%;
       list-style-type: none;
       background: none;
-      border: 0px solid green;
+      border: 0px solid pink;
     }
   
     canvas.imgHolder {
@@ -244,14 +246,14 @@
       position:relative;
         height: auto;
         width:72%;
-        margin: 4px 12.5% auto;
+        margin: 4px 0 0 13.5%;
         border: 0px solid magenta;
     }
 
     ul#trainingBtns li {
       display: inline-block;
       position: relative;
-      width: 24.8%;
+      width: 24%;
       height: 40px;
       top:0!important;
       left: 0;
@@ -259,7 +261,6 @@
       background: none;
       border: 0px solid yellow;
     }
-
 
     li span {
         font-size: 0.85em;
