@@ -1,23 +1,23 @@
 # Coffee Mate (Preview)
 
-<img src = "cm-cover.png" width="50%" height="auto" />
+<img src = "cm-cover.png" width="80%" height="auto" />
 
 #### Use Case
-
-Coffee capsules separated from boxes and info lost. What is this capsule (Visual I.D.), what flavor is it (audio I.D.), how strong is it?
+Problem: When my Nespresso capsules become separated from their boxes, I lose all the information about them. 
+Solution: Use Google Home Hub (camera) to identify capsules on site and dispense info about them via voice.
 
 #### Technologies
 1. Dialogflow
-2. Tensorflow
+2. Tensorflow Lite
 3. Firebase - database, storage, ml, cloud functions
 4. Auto ML on GCP - built custom model for capsule I.D. via camera
 5. Angular JS 
-6. VS Code
+6. Typescript and VS Code
 
-#### Code
-Coming Soon!
+#### Status
+Currently, I'm bug fixing, polishing UI, and collaborating on TF integration. The latter, is tricky b/c documentation only exists for native iOS and Android implementation. Firebase ML is in Beta and as of yet, there is no official Angular integration path.
 
-<br><br>
+<br>
 
 # Tensorflow
 
@@ -41,11 +41,11 @@ This project use the MobileNet Model for image recognition and the YouTube API f
 
 Please note: this project is designed for Chrome on desktop/laptop. It's best viewed in full screen mode.
 
-<br><br>
+<br>
 
 # AIY Voice Kit 
 
-<img src="mobile-flow_oqUfzYjvYy.jpeg" />
+<img src="mobile-flow_oqUfzYjvYy.jpeg" width="80%" />
 
 #### Smart Doorbell?
 Imagine, when someone rings your bell, it prompts the Google Assistant to greet the visitor. The Pi camera takes their picture and saves it up to the cloud for review. Once you've had a chance to confirm the visitors identity visually, you can ask the Assistant to open the door and let them in. A detailed tutorial is available <a href="https://www.hackster.io/elizmyers/aiy-smart-doorbell-02d8ad" target="_blank">here</a>.
