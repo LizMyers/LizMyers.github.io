@@ -4,7 +4,7 @@
 
 #### Use Case
 Problem: When my Nespresso capsules become separated from their boxes, I lose all the information about them. 
-Solution: Use Google Home Hub (camera) to identify capsules on site and dispense info about them via voice.
+Solution: Use Google Home Hub to identify capsules and dispense info about them via voice.
 
 #### Technologies
 1. Dialogflow
@@ -47,7 +47,7 @@ Please note: this project is designed for Chrome on desktop/laptop. It's best vi
 
 <img src="mobile-flow_oqUfzYjvYy.jpeg" width="80%" />
 
-#### Smart Doorbell?
+#### Smart Doorbell
 Imagine, when someone rings your bell, it prompts the Google Assistant to greet the visitor. The Pi camera takes their picture and saves it up to the cloud for review. Once you've had a chance to confirm the visitors identity visually, you can ask the Assistant to open the door and let them in. A detailed tutorial is available <a href="https://www.hackster.io/elizmyers/aiy-smart-doorbell-02d8ad" target="_blank">here</a>.
 
 #### What is That?
