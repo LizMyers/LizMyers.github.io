@@ -1,5 +1,5 @@
 
-<img src = "Coffeemate.png" />
+<img src = "coffeemate.png" />
 # Coffee Mate (Preview)
 
 [insert mobile and firebase screenshot here]
