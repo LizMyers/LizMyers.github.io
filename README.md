@@ -1,3 +1,24 @@
+# Coffee Mate Preview
+
+[insert mobile and firebase screenshot here]
+
+#### Use Case
+
+Coffee capsules separated from boxes and info lost. What is this capsule (Visual I.D.), what flavor is it (audio I.D.), how strong is it?
+
+#### Technologies
+1. Dialogflow
+2. Tensorflow
+3. Firebase - database, storage, ml, cloud functions
+4. Auto ML on GCP - built custom model for capsule I.D. via camera
+5. Angular JS 
+6. VS Code
+
+#### Code
+Coming Soon!
+
+
+
 # Tensorflow
 
 ### TFJS - Experiments in Chrome
