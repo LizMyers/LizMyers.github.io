@@ -1,3 +1,5 @@
+
+<img src = "Coffeemate.png" />
 # Coffee Mate (Preview)
 
 [insert mobile and firebase screenshot here]
