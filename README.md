@@ -1,8 +1,6 @@
-
-<img src = "coffeemate.png" />
 # Coffee Mate (Preview)
 
-[insert mobile and firebase screenshot here]
+<img src = "cm-cover.png" width="50%" height="auto" />
 
 #### Use Case
 
