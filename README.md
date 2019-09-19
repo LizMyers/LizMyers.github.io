@@ -25,3 +25,6 @@ Please note: this project is designed for Chrome on desktop/laptop. It's best vi
 
 #### What is That?
 This project adds computer vision to the voice kit, so that machines can describe what they see! Using a Raspberry Pi, Tensorflow, and Python, you can identify three classes: logos, text, and objects. A detailed tutorial is available <a href="https://www.hackster.io/elizmyers/add-vision-to-the-aiy-voice-kit-e9ff3d" target="_blank">here</a>.
+
+#### Smart Doorbell?
+Using computer voice and vision, this project allows users to control their home with greater ease and security. A detailed tutorial is available <a href="https://www.hackster.io/elizmyers/aiy-smart-doorbell-02d8ad" target="_blank">here</a>.
