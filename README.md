@@ -1,4 +1,4 @@
-# Coffee Mate Preview
+# Coffee Mate (Preview)
 
 [insert mobile and firebase screenshot here]
 
@@ -17,7 +17,7 @@ Coffee capsules separated from boxes and info lost. What is this capsule (Visual
 #### Code
 Coming Soon!
 
-
+<br><br><br>
 
 # Tensorflow
 
