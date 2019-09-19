@@ -17,7 +17,7 @@ Coffee capsules separated from boxes and info lost. What is this capsule (Visual
 #### Code
 Coming Soon!
 
-<br><br><br>
+<br><br>
 
 # Tensorflow
 
@@ -41,6 +41,7 @@ This project use the MobileNet Model for image recognition and the YouTube API f
 
 Please note: this project is designed for Chrome on desktop/laptop. It's best viewed in full screen mode.
 
+<br><br>
 
 # AIY Voice Kit 
 
